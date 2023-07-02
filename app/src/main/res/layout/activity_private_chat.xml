@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="0dp"
+        android:background="@color/brightblue"
+        android:id="@+id/toolbarofspecificchat">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/backImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_launcher_foreground"
+                app:tint="@color/white">
+
+            </ImageButton>
+
+
+
+
+            <TextView
+                android:id="@+id/textUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/backImage"
+                tools:text="user"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/editTextMessage"
+        android:layout_below="@id/toolbarofspecificchat">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewofspecific"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_margin="5dp"
+           >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </ScrollView>
+
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/azure"
+        android:hint="Message"
+        android:paddingLeft="20dp"
+        android:paddingEnd="10dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/carviewofsendmessage"
+        android:layout_toRightOf="@id/editTextMessage"
+        android:layout_marginLeft="-50dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/blue_toolbar"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="45dp">
+
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:backgroundTint="@android:color/transparent"
+            android:background="@android:color/transparent"
+            android:id="@+id/btnSend"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline"
+            app:tint="@color/white">
+
+        </ImageButton>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
